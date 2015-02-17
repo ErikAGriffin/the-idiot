@@ -1,9 +1,9 @@
 <h1>The Idiot</h1>
-<p>The Idiot is a card game, and happens to be my favorite card game.  It's common name in english is Sh*thead, but I thought that might not be the best repo name.
+<p>The Idiot is a card game, and happens to be my favorite card game.  It's common name in english is Sh*thead, but I thought that might not be the most appropriate repo name.
 </p>
 <h2>Rules</h2>
-<i>There are many variations on rules for this game. This particular variant will use the rules I learned while at Chapel Hill</i>
-<p><b>Up to five people are dealt a hand of six cards as well as an additional three face-down cards.</b> (By convention the face-down cards are dealt first).
+<i>There are many variations on rules for this game. This particular variant will use the rules I learned while at Chapel Hill.</i>
+<p><b>Up to five people are dealt a hand of six cards as well as an additional three face-down cards.</b> (<i>By convention the face-down cards are dealt first</i>).
 The remaining cards form a deck near the middle of the table.
 <br />
 <b>Each player then selects three cards from their hand to lay face-up on top of their face-down cards.</b>
@@ -15,16 +15,16 @@ These cards may only be played while the player has no more cards in their hand.
 <br />
 </p>
 <p>
-After setup pay begins at the first player who places a <b>4</b> on the table. If no players have a <b>4</b>, then a <b>5</b> is asked for, and so on.
+After setup play begins at the first player who places a <b>4</b> on the table. If no players have a <b>4</b>, then a <b>5</b> is asked for, and so on.
 <br />
 Play continues in a clockwise fashion, and each player must play a card that is of equal or greater value than the card on the table. <b>4</b> is the lowest value and <b>Ace</b> is the highest. This is because <b>2</b> and <b>3</b> are two of four <i>special cards</i>, which we will address later.
 <br />
-<b>If a player cannot produce a card of equal or greater value, they are forced to pick up the cards on the table, and it is the next player's turn.</b>
+If a player cannot produce a card of equal or greater value, <b>they are forced to pick up the cards on the table</b>, and it is the next player's turn.
 </p>
 <p>
 <b>A player is allowed to play any number of cards that are of the same value at once.</b> That is, if a <b>5</b> is on the table, a player may play two <b>5</b>'s, four <b>6</b>'s, three <b>Kings</b> or any combination of a legal card they like.
 <br />
-<b>Any player is alllowed to play cards of the same face value of the pile <i>at any time</i></b>. This means that a player can skip others by placing a <b>Jack</b> on top of another <b>Jack</b>.  Play then continues left of the new position.
+<b>Any player, <i>at any time</i>, is alllowed to play cards of the same value as the current card on the pile</b>. This means that a player can skip others by placing a <b>Jack</b> on top of an already played <b>Jack</b>.  Play then continues left of the new position.
 <br />
 <b>Playing four cards of the same value at once causes to pile to <i>burn</i>.</b> Burning the pile means removing those cards from the game, and the player that did so gets to go again. Note that it is only whomever played the last card that matters, so laying a <b>7</b> on top of the previous player's three <7>'s will cause you to burn the pile.
 </p>
@@ -54,14 +54,25 @@ Upon playing this card the player announces <b>"Higher"</b> or <b>"Lower"</b>. T
 <p>
 Burning the deck with four cards only works if they are touching. So if someone plays a <b>Queen</b> and the next player plays a <b>2</b> before you can get your three <b>Queens</b> on the table, the deck will not burn even if it is your turn.
 <br />
+--------------
+<br />
 A <b>3</b> is a pass. Therefore if the play is <b>"lower"</b> to you, you may play a <b>3</b> and pass <b>"lower"</b> to the next player, but you may not change the rule. It is for this reason a <b>3</b> is considered stronger than an <b>Ace</b>.
+<br />
+--------------
 <br />
 If it is your turn and you can legally play a card, you must play it.
 <br />
+--------------
+<br />
+A player may only play out of turn with cards that are identical to the one currently on the pile. So if an <b>Ace</b> is played and followed by a <b>3</b>, no player may play <b>Ace</b> out of turn but anyone with a <b>3</b> could do so immediately.
+<br />
+--------------
+<br />
 The cards on the table (<i>those face-down and the face-up ones on top of them</i>) may only be played while you don't have cards in your hand.  Therefore if you had started to play them, but then was forced to pick up the pile, you may not use them again until your hand is empty.
 <br />
-Furthermore you may only play the face-down cards after all your face-up cards have been played.
+--------------
 <br />
+Furthermore you may only play the face-down cards after all your face-up cards have been played.
 </p>
 
 
