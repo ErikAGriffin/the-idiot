@@ -8,6 +8,7 @@ The remaining cards form a deck near the middle of the table.
 <br />
 <b>Each player then selects three cards from their hand to lay face-up on top of their face-down cards.</b>
 These cards may only be played while the player has no more cards in their hand.
+Furthermore you may only play the face-down cards after all your face-up cards have been played.
 <br />
 <b>A player must always have at least three cards in their hand while there are cards left in the deck.</b>
 <br />
@@ -26,7 +27,7 @@ If a player cannot produce a card of equal or greater value, <b>they are forced 
 <br />
 <b>Any player, <i>at any time</i>, is alllowed to play cards of the same value as the current card on the pile</b>. This means that a player can skip others by placing a <b>Jack</b> on top of an already played <b>Jack</b>.  Play then continues left of the new position.
 <br />
-<b>Playing four cards of the same value at once causes to pile to <i>burn</i>.</b> Burning the pile means removing those cards from the game, and the player that did so gets to go again. Note that it is only whomever played the last card that matters, so laying a <b>7</b> on top of the previous player's three <7>'s will cause you to burn the pile.
+<b>Playing four cards of the same value at once causes to pile to <i>burn</i>.</b> Burning the pile means removing those cards from the game, and the player that did so gets to go again. Note that it is only whomever played the last card that matters, so laying a <b>7</b> on top of the previous player's three <b>7</b>'s will cause you to burn the pile.
 </p>
 <p>
 The other way to burn the pile is by playing a <b>10</b>, one of the game's <i>special cards</i>.
@@ -69,10 +70,7 @@ A player may only play out of turn with cards that are identical to the one curr
 --------------
 <br />
 The cards on the table (<i>those face-down and the face-up ones on top of them</i>) may only be played while you don't have cards in your hand.  Therefore if you had started to play them, but then was forced to pick up the pile, you may not use them again until your hand is empty.
-<br />
---------------
-<br />
-Furthermore you may only play the face-down cards after all your face-up cards have been played.
+
 </p>
 
 
