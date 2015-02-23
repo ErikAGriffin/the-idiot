@@ -1,0 +1,3 @@
+class IdiotGameLogic
+
+end
