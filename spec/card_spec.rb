@@ -2,7 +2,7 @@ require 'card'
 
 describe 'Card' do
 
-  let(:card) {Card.new(1,"♠")}
+  let(:card) {Card.new(1,:♠)}
 
   it 'has a rank' do
     expect(card.rank).to eq 1

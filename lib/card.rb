@@ -2,18 +2,18 @@ class Card
 
   attr_reader :rank, :contents
 
-  def initialize(rank=0,suit= "?" )
+  def initialize(rank=0,suit= :"?" )
     @rank = rank
-    @suit = suit
+    @suit = suit.to_sym
   end
 
   def suit
-    @suit.to_sym
+    @suit
   end
 
   def contents
     rank = parse_rank
-    (rank+@suit).to_sym
+    (rank+suit.to_s).to_sym
   end
 
   def parse_rank
