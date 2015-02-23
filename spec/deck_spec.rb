@@ -16,6 +16,9 @@ describe 'Deck' do
     expect(deck.count).to eq 51
   end
 
+  # Once every blue moon this test will fail.
+  # Working as intended
+
   it 'can shuffle itself' do
     deck.draw
     king = double :card
