@@ -18,6 +18,5 @@ deck = Deck.new
 build_deck(deck)
 
 
-puts deck.inspect
 
 
