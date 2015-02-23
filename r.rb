@@ -1,0 +1,5 @@
+require './lib/deck'
+require './lib/card'
+require './lib/table'
+require './lib/player'
+require './lib/idiot_game_logic'

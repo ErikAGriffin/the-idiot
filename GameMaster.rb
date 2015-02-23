@@ -1,8 +1,7 @@
-require './lib/deck'
-require './lib/card'
+require './r'
 
 def build_deck(deck)
-  suits = ["♠","♥","♦","♣"]
+  suits = [:♠,:♥,:♦,:♣]
   ranks = [*1..13]
 
   ranks.each do |rank|
@@ -14,8 +13,12 @@ def build_deck(deck)
 end
 
 deck = Deck.new
+table = Table.new
+game = IdiotGameLogic.new(table)
 
 build_deck(deck)
+
+
 
 
 
