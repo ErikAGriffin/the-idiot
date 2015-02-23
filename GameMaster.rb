@@ -14,10 +14,16 @@ end
 
 deck = Deck.new
 table = Table.new
-game = IdiotGameLogic.new(table)
 
 build_deck(deck)
 
+player1 = Player.new
+player2 = Player.new
+player3 = Player.new
+
+game = IdiotGameLogic.new(table,[player1,player2,player3])
+
+puts game.inspect
 
 
 
