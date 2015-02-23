@@ -5,9 +5,6 @@ class Card
   def initialize(rank=0,suit= "?" )
     @rank = rank
     @suit = suit
-
-    @ranks = ["?", "Ace", "2", "3", "4", "5", "6", "7",
-      "8", "9", "10", "Jack", "Queen", "King"]
   end
 
   def suit
@@ -20,7 +17,9 @@ class Card
   end
 
   def parse_rank
-    @ranks[@rank]
+    ranks = ["?", "Ace", "2", "3", "4", "5", "6", "7",
+      "8", "9", "10", "Jack", "Queen", "King"]
+    ranks[@rank]
   end
 
 

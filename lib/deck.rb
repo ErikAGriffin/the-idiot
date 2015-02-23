@@ -7,6 +7,8 @@ class Deck < Array
 
   def shuffle
     self.shuffle!
+    self.shuffle!
+    self.shuffle!
   end
 
   def top_card
