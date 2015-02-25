@@ -62,6 +62,31 @@ describe 'IdiotGameLogic' do
     expect(game.play(player3,four_hearts)).to eq true
   end
 
+  context 'Special Cards' do
+    it 'knows a 2 can always be played' do
+      two_spades = double :card, rank: 2
+      ace_spades = double :card, rank: 14
+      allow(table).to receive(:topcard).and_return(ace_spades)
+      expect(game.play(player1,two_spades)).to eq true
+    end
+
+    it 'knows a 3 can always be played' do
+      three_spades = double :card, rank: 3
+      ace_spades = double :card, rank: 14
+      allow(table).to receive(:topcard).and_return(ace_spades)
+      expect(game.play(player1,three_spades)).to eq true
+    end
+
+    it 'knows a 10 can always be played' do
+      ten_spades = double :card, rank: 10
+      ace_spades = double :card, rank: 14
+      allow(table).to receive(:topcard).and_return(ace_spades)
+      expect(game.play(player1,ten_spades)).to eq true
+    end
+
+
+  end
+
 
 
 

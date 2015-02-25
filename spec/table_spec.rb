@@ -25,6 +25,12 @@ describe 'Table' do
     expect(table.topcard).to eq card
   end
 
+  context 'Special Cards' do
+
+
+
+  end
+
 
 
 
