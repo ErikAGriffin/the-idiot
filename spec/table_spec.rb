@@ -25,6 +25,18 @@ describe 'Table' do
     expect(table.topcard.rule).to eq card.rank
   end
 
+  it 'will burn the deck if top four cards are of equal rank' do
+    seven_spades = double :card, rank: 7
+    seven_hearts = double :card, rank: 7
+    seven_diamonds = double :card, rank: 7
+    seven_clubs = double :card, rank: 7
+    table.place(seven_spades)
+    table.place(seven_hearts)
+    table.place(seven_diamonds)
+    table.place(seven_clubs)
+    expect(table).to eq []
+  end
+
   context 'Special Cards' do
 
     it 'zeros out the table if a 2 is played' do

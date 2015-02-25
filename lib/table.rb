@@ -25,6 +25,7 @@ class Table < Array
   def place(card)
     self << card
     card.rank == 10 ? burn! : self
+    check_four_burn if count > 3
   end
 
   def burn!
@@ -50,7 +51,11 @@ class Table < Array
     else
       self.last.rank
     end
+  end
 
+  def check_four_burn
+    burn! if self[-4..-1].inject {|lastcard, card|
+      lastcard.rank == card.rank ? card : (return nil) }
   end
 
 
