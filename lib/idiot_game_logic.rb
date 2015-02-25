@@ -69,6 +69,7 @@ class IdiotGameLogic
   end
 
   def card_illegal?(card)
+    return true if table.topcard.rule == :lower && card.rank > 8
     if table.topcard.rule <= card.rank
       false
     elsif card.rank == 2 || card.rank == 3 || card.rank == 10
