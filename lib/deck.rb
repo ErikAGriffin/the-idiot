@@ -1,18 +1,29 @@
-class Deck < Array
+class Deck
 
+  def initialize
+    @cards = []
+  end
+
+  def add_card(card)
+    @cards << card
+  end
 
   def draw
-    self.pop
+    @cards.pop
   end
 
   def shuffle
-    self.shuffle!
-    self.shuffle!
-    self.shuffle!
+    @cards.shuffle!
+    @cards.shuffle!
+    @cards.shuffle!
   end
 
   def top_card
-    self.last
+    @cards.last
+  end
+
+  def count
+    @cards.count
   end
 
 

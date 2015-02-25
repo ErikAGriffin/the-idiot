@@ -37,7 +37,8 @@ deal_to_players_in(game,deck)
 
 puts game
 
-game.play(player1,player1.hand[0])
+game.play(player2,player2.hand[0])
+puts game.inspect
 
 
 
