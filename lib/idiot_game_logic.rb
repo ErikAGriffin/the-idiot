@@ -1,6 +1,6 @@
 class IdiotGameLogic
 
-  attr_reader :table
+  attr_reader :table, :players
 
   def initialize(table, players=[])
     @table = table
@@ -21,8 +21,8 @@ class IdiotGameLogic
     return false if card_illegal?(card)
     quick_play(player,card)
     if player == @active_player
-      table.place(card)
       player.play(card)
+      table.place(card)
       next_player
       true
     else
@@ -62,16 +62,17 @@ class IdiotGameLogic
   end
 
   def quick_play(player,card)
+    return if !table.topcard
     if table.topcard.rank == card.rank
       @active_player = player
     end
   end
 
   def card_illegal?(card)
-    if table.topcard.rank > card.rank
-      true
-    else
+    if !table.topcard || table.topcard.rank <= card.rank
       false
+    else
+      true
     end
   end
 
