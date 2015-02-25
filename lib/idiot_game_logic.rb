@@ -69,7 +69,7 @@ class IdiotGameLogic
   end
 
   def card_illegal?(card)
-    if !table.topcard || table.topcard.rank <= card.rank
+    if table.topcard.rule <= card.rank
       false
     elsif card.rank == 2 || card.rank == 3 || card.rank == 10
       false

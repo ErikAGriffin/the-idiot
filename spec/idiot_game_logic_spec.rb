@@ -3,7 +3,8 @@ require 'idiot_game_logic'
 describe 'IdiotGameLogic' do
 
   let(:card) {double :card, rank: 4}
-  let(:table) {double :table, burn: nil, place: nil, topcard: card}
+  let(:topcard) {double :tablerule, rank: 4, rule: 4}
+  let(:table) {double :table, burn: nil, place: nil, topcard: topcard}
   let(:player1) {double :player, play: nil}
   let(:player2) {double :player, play: nil}
   let(:player3) {double :player, play: nil}
@@ -47,7 +48,7 @@ describe 'IdiotGameLogic' do
   end
 
   it 'wont allow a player to play a card that cant be played' do
-    six_spades = double :card, rank: 6
+    six_spades = double :card, rank: 6, rule: 6
     four_hearts = double :card, rank: 4
     allow(table).to receive(:topcard).and_return(six_spades)
     game.play(player1, six_spades)
@@ -65,21 +66,21 @@ describe 'IdiotGameLogic' do
   context 'Special Cards' do
     it 'knows a 2 can always be played' do
       two_spades = double :card, rank: 2
-      ace_spades = double :card, rank: 14
+      ace_spades = double :card, rank: 14, rule: 14
       allow(table).to receive(:topcard).and_return(ace_spades)
       expect(game.play(player1,two_spades)).to eq true
     end
 
     it 'knows a 3 can always be played' do
       three_spades = double :card, rank: 3
-      ace_spades = double :card, rank: 14
+      ace_spades = double :card, rank: 14, rule: 14
       allow(table).to receive(:topcard).and_return(ace_spades)
       expect(game.play(player1,three_spades)).to eq true
     end
 
     it 'knows a 10 can always be played' do
       ten_spades = double :card, rank: 10
-      ace_spades = double :card, rank: 14
+      ace_spades = double :card, rank: 14, rule: 14
       allow(table).to receive(:topcard).and_return(ace_spades)
       expect(game.play(player1,ten_spades)).to eq true
     end
