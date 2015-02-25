@@ -18,6 +18,8 @@ class IdiotGameLogic
   end
 
   def play(player,card)
+    return false if card_illegal?(card)
+    quick_play(player,card)
     if player == @active_player
       table.place(card)
       player.play(card)
@@ -28,7 +30,7 @@ class IdiotGameLogic
     end
   end
 
-  # attr_readers #
+  # # # attr_readers # # #
 
   def player1
     @players[0]
@@ -57,6 +59,20 @@ class IdiotGameLogic
   def next_player
     index = @players.find_index(@active_player)+1
     @active_player = @players[index]
+  end
+
+  def quick_play(player,card)
+    if table.topcard.rank == card.rank
+      @active_player = player
+    end
+  end
+
+  def card_illegal?(card)
+    if table.topcard.rank > card.rank
+      true
+    else
+      false
+    end
   end
 
 end

@@ -2,7 +2,8 @@ require 'idiot_game_logic'
 
 describe 'IdiotGameLogic' do
 
-  let(:table) {double :table, place: nil}
+  let(:card) {double :card, rank: 4}
+  let(:table) {double :table, burn: nil, place: nil, topcard: card}
   let(:player1) {double :player, play: nil}
   let(:player2) {double :player, play: nil}
   let(:player3) {double :player, play: nil}
@@ -34,26 +35,34 @@ describe 'IdiotGameLogic' do
   end
 
   it 'allows a player to play a card on their turn' do
-    card1 = double :card
-    card2 = double :card
-    expect(game.play(player1,card1)).to eq true
-    expect(game.play(player2,card2)).to eq true
+    expect(game.play(player1,card)).to eq true
+    expect(game.play(player2,card)).to eq true
   end
 
   it 'wont allow a player to play not on their turn' do
-    card1 = double :card
-    card2 = double :card
+    card2 = double :card, rank: 5
     game.add_player(player3)
-    game.play(player1,card1)
+    game.play(player1,card)
     expect(game.play(player3,card2)).to eq false
   end
 
   it 'wont allow a player to play a card that cant be played' do
     six_spades = double :card, rank: 6
     four_hearts = double :card, rank: 4
-
-
+    allow(table).to receive(:topcard).and_return(six_spades)
+    game.play(player1, six_spades)
+    expect(game.play(player2, four_hearts)).to eq false
   end
+
+  it 'will allow a player to play cards of identical rank out of turn' do
+    four_spades = double :card, rank: 4
+    four_hearts = double :card, rank: 4
+    game.add_player(player3)
+    game.play(player1,four_spades)
+    expect(game.play(player3,four_hearts)).to eq true
+  end
+
+
 
 
 
