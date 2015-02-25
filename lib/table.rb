@@ -8,6 +8,11 @@ class TableRule
   def initialize
     @rule = 4
   end
+
+  def zero_out
+    @rank = 0
+    @rule = 4
+  end
 end
 
 class Table < Array
@@ -19,21 +24,33 @@ class Table < Array
 
   def place(card)
     self << card
+    card.rank == 10 ? burn! : self
   end
 
   def burn!
     self.clear
+    @rule.zero_out
   end
 
   def topcard
     if self.last
       @rule.rank = self.last.rank
-      @rule.rule = self.last.rank
+      @rule.rule = find_rule(self.last)
     else
-      @rule.rank = 0
-      @rule.rule = 4
+      @rule.zero_out
     end
     @rule
+  end
+
+  # # # # # # # # # # # # # #
+
+  def find_rule(card)
+    if card.rank == 3
+      self[-2].rank
+    else
+      self.last.rank
+    end
+
   end
 
 

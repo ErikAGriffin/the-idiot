@@ -33,18 +33,23 @@ describe 'Table' do
       expect(table.topcard.rank <= 4).to eq true
     end
 
-    # !! ** !!
-    # Ahh... I think I'm going to have to make an object for
-    # what I call the 'table rule', aka what the game is presenting
-    # for you to beat.
-    # Because of the condition that a 3 can only jump a 3, but the value is
-    # whatever is underneath
-
     it 'passes on present value if a 3 is played' do
       queen_hearts = double :card, rank: 12
       three_spades = double :card, rank: 3
       table.place(queen_hearts)
       table.place(three_spades)
+      expect(table.topcard.rank).to eq 3
+      expect(table.topcard.rule).to eq 12
+    end
+
+    it 'burns the deck when a 10 is played' do
+      ace_spades = double :card, rank: 14
+      ten_diamonds = double :card, rank: 10
+      table.place(ace_spades)
+      table.place(ten_diamonds)
+      expect(table).to eq []
+      expect(table.topcard.rule).to eq 4
+      expect(table.topcard.rank).to eq 0
     end
 
   end
