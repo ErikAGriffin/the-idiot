@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    BILBO!
+{{ content }}
+    <br>
+    <br>
+    <br>
+        <a href="http://localhost:9292">RACKUP</a>
+        .........
+        <a href="http://localhost:9393">Shotgun</a>
+    </body>
+</html>
+
