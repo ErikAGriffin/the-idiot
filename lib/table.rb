@@ -1,26 +1,4 @@
-class TableRule
-
-  # How can I make this more protected,
-  # yet allow the table and the table alone
-  # to always modify these properties
-
-  attr_accessor :rank, :rule
-  def initialize
-    @rule = 4
-  end
-
-  def zero_out
-    @rank = 0
-    @rule = 4
-  end
-end
-
 class Table < Array
-
-  def initialize
-    super
-    @rule = TableRule.new
-  end
 
   def place(card)
     self << card
@@ -30,17 +8,16 @@ class Table < Array
 
   def burn!
     self.clear
-    @rule.zero_out
   end
 
-  def topcard
-    if self.last
-      @rule.rank = self.last.rank
-      @rule.rule = find_rule(self.last)
-    else
-      @rule.zero_out
-    end
+  def topcard_rule
+    self.last ? @rule = find_rule(last) : @rule = 4
     @rule
+  end
+
+  def topcard_rank
+    self.last ? @rank = last.rank : @rank = 0
+    @rank
   end
 
   # # # # # # # # # # # # # #
@@ -57,9 +34,5 @@ class Table < Array
     burn! if self[-4..-1].inject {|lastcard, card|
       lastcard.rank == card.rank ? card : (return nil) }
   end
-
-
-
-
 
 end
