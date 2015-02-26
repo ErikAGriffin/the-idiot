@@ -1,4 +1,4 @@
-require 'card'
+require_relative '../app/models/card'
 
 describe 'Card' do
 

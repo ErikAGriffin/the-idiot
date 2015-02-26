@@ -1,4 +1,4 @@
-require 'idiot_game_logic'
+require_relative '../app/models/idiot_game_logic'
 
 describe 'IdiotGameLogic' do
 

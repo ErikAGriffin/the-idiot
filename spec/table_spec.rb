@@ -1,4 +1,4 @@
-require 'table'
+require_relative '../app/models/table'
 
 describe 'Table' do
 

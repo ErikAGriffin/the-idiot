@@ -1,4 +1,4 @@
-require 'deck'
+require_relative '../app/models/deck'
 
 describe 'Deck' do
 

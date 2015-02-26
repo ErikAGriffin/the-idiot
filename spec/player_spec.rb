@@ -1,4 +1,4 @@
-require 'player'
+require_relative '../app/models/player'
 
 describe 'Player' do
 
