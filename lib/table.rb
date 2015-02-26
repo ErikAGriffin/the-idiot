@@ -1,22 +1,28 @@
-class Table < Array
+class Table
+
+  attr_reader :cards
+
+  def initialize
+    @cards = []
+  end
 
   def place(card)
-    self << card
-    card.rank == 10 ? burn! : self
-    check_four_burn if count > 3
+    @cards << card
+    card.rank == 10 ? burn! : cards
+    check_four_burn if cards.count > 3
   end
 
   def burn!
-    self.clear
+    @cards.clear
   end
 
   def topcard_rule
-    self.last ? @rule = find_rule(last) : @rule = 4
+    @cards.last ? @rule = find_rule(@cards.last) : @rule = 4
     @rule
   end
 
   def topcard_rank
-    self.last ? @rank = last.rank : @rank = 0
+    @cards.last ? @rank = @cards.last.rank : @rank = 0
     @rank
   end
 
@@ -24,14 +30,14 @@ class Table < Array
 
   def find_rule(card)
     if card.rank == 3
-      self[-2].rank
+      @cards[-2].rank
     else
-      self.last.rank
+      @cards.last.rank
     end
   end
 
   def check_four_burn
-    burn! if self[-4..-1].inject {|lastcard, card|
+    burn! if @cards[-4..-1].inject {|lastcard, card|
       lastcard.rank == card.rank ? card : (return nil) }
   end
 
