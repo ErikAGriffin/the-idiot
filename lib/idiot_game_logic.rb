@@ -62,15 +62,15 @@ class IdiotGameLogic
   end
 
   def quick_play(player,card)
-    return if !table.topcard
-    if table.topcard.rank == card.rank
+    return if table.topcard_rank == 0
+    if table.topcard_rank == card.rank
       @active_player = player
     end
   end
 
   def card_illegal?(card)
-    return true if table.topcard.rule == :lower && card.rank > 8
-    if table.topcard.rule <= card.rank
+    return true if table.topcard_rule == :lower && card.rank > 8
+    if table.topcard_rule <= card.rank
       false
     elsif card.rank == 2 || card.rank == 3 || card.rank == 10
       false
