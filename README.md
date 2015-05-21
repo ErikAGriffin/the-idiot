@@ -1,5 +1,7 @@
 <h1>The Idiot</h1>
-<p>The Idiot is a card game, and happens to be my favorite card game.  It's common name in english is Sh*thead, but I thought that might not be the most appropriate repo name.
+<p>The Idiot is a card game, and happens to be my favorite card game.  It's common name in english is Sh*thead, but I thought that might not be the most appropriate repo name.</p>
+<p>
+I would very much like to come back and finish this someday, but at the moment I don't have the time.  As I remember the Game Logic is almost completely finished, except that the special card '<b>8</b>' does not have its rules implemented.
 </p>
 <h2>Rules</h2>
 <i>There are many variations on rules for this game. This particular variant will use the rules I learned while at Chapel Hill.</i>
